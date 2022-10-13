@@ -15,7 +15,8 @@ jobs:
       - run:
           name: "Prepare Environment"
           command: |
-            sudo apt update
+            sudo apt-get update
+            sudo apk add --no-cache zip libzip-dev
             sudo docker-php-ext-install zip
 
       # Download and cache dependencies
