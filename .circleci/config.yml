@@ -20,7 +20,7 @@ jobs:
           command: |
             sudo apt update
             sudo apt-get install -y libzip-dev
-            sudo docker-php-ext-install zip
+            sudo -E docker-php-ext-install zip
 
       # Download and cache dependencies
       - restore_cache:
